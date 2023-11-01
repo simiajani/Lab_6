@@ -6,7 +6,12 @@ def encode(password):
         new_password += new_num
     return password
 
-
+def decode(encoded_password): #subtracts 3 from each integer and decodes the encoded password
+    decoded_password = ''
+    for digit in encoded_password:
+        new_digit = str((int(digit) - 3) % 10)
+        decoded_password += new_digit
+    return decoded_password
 def decode(password):
     decoded_password = ""
     for num in password:
